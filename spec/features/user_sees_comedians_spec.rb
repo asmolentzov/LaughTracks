@@ -20,12 +20,12 @@ RSpec.describe 'A visitor to our app' do
     
     visit '/comedians'
     
-    within '#Bob' do
-      expect(page).to have_content("Name: #{bob.name}")
+    within "#Bob" do
+      expect(page).to have_content("#{bob.name}")
       expect(page).to have_content("Age: #{bob.age}")
       expect(page).to have_content("City: #{bob.city}")
     end
-    within '#Joe' do
+    within "#Joe" do
       expect(page).to have_content("Name: #{joe.name}")
       expect(page).to have_content("Age: #{joe.age}")
       expect(page).to have_content("City: #{joe.city}")
