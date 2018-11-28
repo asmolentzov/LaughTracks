@@ -26,7 +26,7 @@ RSpec.describe 'A visitor to our app' do
       expect(page).to have_content("City: #{bob.city}")
     end
     within "#Joe" do
-      expect(page).to have_content("Name: #{joe.name}")
+      expect(page).to have_content("#{joe.name}")
       expect(page).to have_content("Age: #{joe.age}")
       expect(page).to have_content("City: #{joe.city}")
     end
