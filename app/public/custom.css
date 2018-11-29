@@ -1,6 +1,9 @@
 h3 {
   text-align: center;
 }
+h6 {
+  margin-bottom: 0;
+}
 
 .img-thumbnail {
   height: 150px;
