@@ -16,9 +16,9 @@ RSpec.describe 'As a visitor to the app' do
 
     visit '/comedians?age=34'
     
-    expect(page).to have_css("article#comedian-#{bob.id}")
-    expect(page).to_not have_css("article#comedian-#{joe.id}")
-    expect(page).to_not have_css("article#comedian-#{jane.id}")
+    expect(page).to have_selector("#comedian-#{joe.id}")
+    expect(page).to_not have_selector("#comedian-#{bob.id}")
+    expect(page).to_not have_selector("#comedian-#{jane.id}")
     expect(page).to have_content("#{joe.name}")
     expect(page).to have_content("Age: #{joe.age}")
     expect(page).to_not have_content("#{bob.name}")
