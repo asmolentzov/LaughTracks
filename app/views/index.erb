@@ -15,6 +15,8 @@
           <ul>
             <li><% comedian.specials.each do |special| %>
               <%= special.name %>
+              Runtime: <%= special.length %>
+              <img src="<%= special.image_location %>" alt="<%= special.name %>"
               <% end %>
             </li>
             </ul>
