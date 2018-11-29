@@ -11,6 +11,8 @@ RSpec.describe Special do
   describe 'Class Methods' do
     describe 'average_length' do
       it 'should return the average length of all the specials' do
+        bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
+        joe = Comedian.create(name: "Joe", age: 50, city: "Stockholm")
         bob_special = bob.specials.create(name: "This is my TV Special!", 
                                           length: 100,
                                           image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Two_Adult_Guinea_Pigs_(cropped).jpg")

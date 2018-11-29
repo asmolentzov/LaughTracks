@@ -1,8 +1,11 @@
 <h1>Comedians</h1>
 <section class="row" id="statistics">
   <h2>Statistics</h2>
+  <p>    
   Average Age: <%= @average_age %>
   Average TV Special Runtime: <%= @average_length %>
+  Cities: <%= @cities %>
+  </p>
 </section>
 <section class="row">
     <% @comedians.each do |comedian| %>
