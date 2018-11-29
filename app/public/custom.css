@@ -1,0 +1,25 @@
+h3 {
+  text-align: center;
+}
+h6 {
+  margin-bottom: 0;
+}
+
+.img-thumbnail {
+  height: 150px;
+}
+
+.comedian {
+  width: 350px;
+  background: #919191;
+  border: 1px solid black;
+  margin: 10px;
+}
+.comedian-stats {
+  text-align: center;
+}
+
+.specials {
+  margin: 0 30px;
+}
+
