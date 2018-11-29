@@ -9,7 +9,6 @@ class Comedian < ActiveRecord::Base
   end
   
   def self.unique_cities
-    # select(:city).distinct.to_a.map { |comedian| comedian.city }.join(' ')
-    distinct(:city).pluck(:city).join(' ')
+    distinct(:city).order(city: :asc).pluck(:city)
   end
 end

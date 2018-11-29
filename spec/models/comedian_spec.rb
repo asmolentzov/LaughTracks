@@ -31,8 +31,7 @@ RSpec.describe Comedian do
         joe = Comedian.create(name: "Joe", age: 50, city: "Stockholm")
         jane = Comedian.create(name: "Jane", age: 50, city: "Stockholm")
         
-        expect(Comedian.unique_cities).to eq("Stockholm Denver")
-        # expect(Comedian.unique_cities).to include("Stockholm")
+        expect(Comedian.unique_cities).to eq(['Denver', 'Stockholm'])      
       end
     end
   end
