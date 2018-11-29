@@ -11,4 +11,8 @@ class Comedian < ActiveRecord::Base
   def self.unique_cities
     distinct(:city).order(city: :asc).pluck(:city)
   end
+  
+  def self.filter_by_age(age)
+    where("age = ?", age)
+  end
 end
