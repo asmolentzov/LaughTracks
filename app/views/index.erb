@@ -10,8 +10,16 @@
         <p>
           City: <%= comedian.city %>
         </p>
+        <p>
+          Specials: 
+          <ul>
+            <li><% comedian.specials.each do |special| %>
+              <%= special.name %>
+              <% end %>
+            </li>
+            </ul>
+          </p>
       </li>
-      <li>Comedian 2</li>
     </ul>
   <% end %>
 </section>
