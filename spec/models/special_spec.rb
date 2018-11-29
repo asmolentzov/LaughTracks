@@ -7,4 +7,21 @@ RSpec.describe Special do
       end
     end
   end
+  
+  describe 'Class Methods' do
+    describe 'average_length' do
+      it 'should return the average length of all the specials' do
+        bob_special = bob.specials.create(name: "This is my TV Special!", 
+                                          length: 100,
+                                          image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Two_Adult_Guinea_Pigs_(cropped).jpg")
+        joe_special = joe.specials.create(name: "This is Joe's Special",
+                                          length: 60,
+                                          image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Cat_and_guinea_pigs.jpg")
+                                          
+        average_length = 80
+        
+        expect(Special.average_length).to eq(average_length)
+      end
+    end
+  end
 end
