@@ -1,28 +1,21 @@
 <h1>Comedians</h1>
-<section class="comedians">
-  <% @comedians.each do |comedian| %>
-    <ul>
-      <li id=<%= comedian.name %>>
+<section class="comedians row">
+  <ul class="list-inline">
+    <% @comedians.each do |comedian| %>
+      <li class="list-inline-item" id=<%= comedian.name %>>
         <h3><%= comedian.name %></h3>
-        <p>
           Age: <%= comedian.age %>
-        </p>
-        <p>
           City: <%= comedian.city %>
-        </p>
-        <p>
           Specials: 
-          <ul>
+          <ul> 
             <% comedian.specials.each do |special| %>
             <li>
                 <%= special.name %>
                 Runtime: <%= special.length %>
-                <img src="<%= special.image_location %>" 
-                     alt="<%=special.name %>"
+                <img class="img-thumbnail" src="<%= special.image_location %>" alt="<%=special.name %>"
             </li>
             <% end %>
             </ul>
-          </p>
       </li>
     </ul>
   <% end %>
