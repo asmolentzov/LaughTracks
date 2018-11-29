@@ -4,4 +4,8 @@ class Special < ActiveRecord::Base
   def self.average_length
     average(:length)
   end
+  
+  def self.total_specials
+    count
+  end
 end

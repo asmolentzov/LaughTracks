@@ -41,4 +41,25 @@ RSpec.describe Comedian do
       end
     end
   end
+  
+  describe 'Instance Methods' do
+    describe '#total_specials' do
+      it 'should return the total number of specials for the comedian' do
+        bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
+        joe = Comedian.create(name: "Joe", age: 50, city: "Stockholm")
+        bob.specials.create(name: "This is my TV Special!", 
+                            length: 100,
+                            image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Two_Adult_Guinea_Pigs_(cropped).jpg")
+        joe.specials.create(name: "This is Joe's Special",
+                            length: 60,
+                            image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Cat_and_guinea_pigs.jpg")
+        joe.specials.create(name: "This is Joe's SECOND Special",
+                            length: 90,
+                            image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Cat_and_guinea_pigs.jpg")
+                            
+        expect(bob.total_specials).to eq(1)
+        expect(joe.total_specials).to eq(2)
+      end
+    end
+  end
 end

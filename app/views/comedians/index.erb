@@ -4,7 +4,8 @@
   <p>    
   Average Age: <%= @average_age %> <br />
   Average TV Special Runtime: <%= @average_length.to_i %> minutes<br />
-  Cities: <%= @cities.join(' ') %>
+  Cities: <%= @cities.join(' ') %> <br />
+  Total TV Specials: <%= @total_specials %>
   </p>
 </section>
 <section class="row">
@@ -14,6 +15,7 @@
         <div class="comedian-stats">
           Age: <%= comedian.age %> <br />
           City: <%= comedian.city %> <br />
+          Total Specials: <%= comedian.total_specials %>
         </div>
         <div class="specials">
           <h6>Specials: </h6>

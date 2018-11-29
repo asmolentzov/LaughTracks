@@ -34,6 +34,7 @@ RSpec.describe 'A visitor to our app' do
       expect(page).to have_content("Average Age: #{Comedian.average_age}")
       expect(page).to have_content("Average TV Special Runtime: #{Special.average_length.to_i}")
       expect(page).to have_content("Cities: #{Comedian.unique_cities.join(' ')}")
+      expect(page).to have_content("Total TV Specials: 2")
     end
   end
 end
