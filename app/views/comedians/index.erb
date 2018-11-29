@@ -1,11 +1,13 @@
 <h1>Comedians</h1>
-<section class="comedians row">
-  <ul class="list-inline">
+<section class="row">
     <% @comedians.each do |comedian| %>
-      <li class="list-inline-item" id=<%= comedian.name %>>
+      <article class="comedian" id=<%= comedian.name %>>
         <h3><%= comedian.name %></h3>
-          Age: <%= comedian.age %>
-          City: <%= comedian.city %>
+        <div class="comedian-stats">
+          Age: <%= comedian.age %> <br />
+          City: <%= comedian.city %> <br />
+        </div>
+        <div class="specials">
           Specials: 
           <ul> 
             <% comedian.specials.each do |special| %>
@@ -16,7 +18,8 @@
             </li>
             <% end %>
             </ul>
-      </li>
-    </ul>
+          </div>
+      </article>
+    <!-- </ul> -->
   <% end %>
 </section>
