@@ -1,4 +1,8 @@
 <h1>Comedians</h1>
+<section class="row" id="statistics">
+  <h2>Statistics</h2>
+  Average Age: <%= @average_age %>
+</section>
 <section class="row">
     <% @comedians.each do |comedian| %>
       <article class="comedian" id=<%= comedian.name %>>
