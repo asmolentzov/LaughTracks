@@ -1,3 +1,11 @@
+# User Story 6
+# 
+# As a visitor
+# When I visit `/comedians`
+# For each comedian, I see a count of their TV specials
+# and the Statistics area on the page should list a total count
+# of TV specials for every comedian.
+
 RSpec.describe 'A visitor to our app' do
   before(:each) do
     @bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
@@ -42,6 +50,20 @@ RSpec.describe 'A visitor to our app' do
     
     within "#comedian-#{jane.id}" do
       expect(page).to have_content("No joke: this comedian has no specials.")
+    end
+  end
+  
+  it 'should show a count of each comedians specials' do
+    @joe.specials.create(name: "This is Joe's SECOND Special",
+                                      length: 90,
+                                      image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Cat_and_guinea_pigs.jpg")
+    visit '/comedians'
+    
+    within "#comedian-#{@bob.id}" do
+      expect(page).to have_content("Total Specials: 1")
+    end
+    within "#comedian-#{@joe.id}" do
+      expect(page).to have_content("Total Specials: 2")
     end
   end
 end
