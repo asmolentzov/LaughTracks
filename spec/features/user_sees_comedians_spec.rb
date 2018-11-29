@@ -41,7 +41,7 @@ RSpec.describe 'A visitor to our app' do
                                       image_location: "https://en.wikipedia.org/wiki/Guinea_pig#/media/File:Cat_and_guinea_pigs.jpg")
     average_age = 40
     average_special_length = 80
-    cities = 'Denver Stockholm'
+    cities = 'Stockholm Denver'
     
     visit '/comedians'
     

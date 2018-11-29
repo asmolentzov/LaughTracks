@@ -29,8 +29,10 @@ RSpec.describe Comedian do
       it 'should return a list of all the unique cities the comedians are from' do
         bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
         joe = Comedian.create(name: "Joe", age: 50, city: "Stockholm")
+        jane = Comedian.create(name: "Jane", age: 50, city: "Stockholm")
         
-        expect(Comedian.unique_cities).to eq("Denver Stockholm")
+        expect(Comedian.unique_cities).to eq("Stockholm Denver")
+        # expect(Comedian.unique_cities).to include("Stockholm")
       end
     end
   end
