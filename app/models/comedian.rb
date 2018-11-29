@@ -15,4 +15,8 @@ class Comedian < ActiveRecord::Base
   def self.filter_by_age(age)
     where("age = ?", age)
   end
+  
+  def total_specials
+    specials.count
+  end
 end
