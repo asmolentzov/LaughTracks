@@ -32,5 +32,27 @@ RSpec.describe Special do
         expect(Special.total_specials).to eq(total)
       end
     end
+    describe '.filter_by_age' do
+      it 'should return the specials for a subset of comedians' do
+        bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
+        joe = Comedian.create(name: "Joe", age: 34, city: "Stockholm")
+        mary = Comedian.create(name: "Mary", age: 34, city: "New York City")
+        bob.specials.create(name: "This is my TV Special!", 
+                                          length: 100,
+                                          image_location: "")
+        joe_special = joe.specials.create(name: "This is Joe's Special",
+                                          length: 60,
+                                          image_location: "")
+        mary_special = mary.specials.create(name: "This is Marys Special",
+                                          length: 80,
+                                          image_location: "")
+        joe_special_2 = joe.specials.create(name: "This is Joe's SECOND Special",
+                                          length: 100,
+                                          image_location: "")
+        filtered_specials = [joe_special, mary_special, joe_special_2]
+        
+        expect(Special.filter_by_age).to eq(filtered_specials)
+      end
+    end
   end
 end
