@@ -1,16 +1,3 @@
-# User Story 7
-# 
-# As a visitor
-# When I visit `/comedians?age=34`
-# Then I see a list of all comedians with an age of 34
-# Just like a previous User Story, BUT all other statistics 
-# information in the 'Statistics' area of the page should be limited 
-# to reflect only the information about the comedians listed on 
-# the page.
-# 
-# - Testing should ensure that calculated statistics are
-#   correct for a limited subset of data
-
 RSpec.describe 'As a visitor to the app' do
   it 'filters the comedians on the page to only show those of indicated age' do
     bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
