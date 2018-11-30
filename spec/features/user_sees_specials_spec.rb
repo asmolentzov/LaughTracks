@@ -1,11 +1,3 @@
-# User Story 6
-# 
-# As a visitor
-# When I visit `/comedians`
-# For each comedian, I see a count of their TV specials
-# and the Statistics area on the page should list a total count
-# of TV specials for every comedian.
-
 RSpec.describe 'A visitor to our app' do
   before(:each) do
     @bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
