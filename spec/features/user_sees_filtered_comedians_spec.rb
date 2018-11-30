@@ -50,8 +50,8 @@ RSpec.describe 'As a visitor to the app' do
     
     filtered_average_age = 34
     filtered_average_length = 80
-    filtered_cities = 'Denver, New York City'
-    filtered_total_specials = 2
+    filtered_cities = 'New York City Stockholm'
+    filtered_total_specials = 3
     
     within "#statistics" do
       expect(page).to have_content("Average Age: #{filtered_average_age}")

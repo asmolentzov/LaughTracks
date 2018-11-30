@@ -51,7 +51,7 @@ RSpec.describe Special do
                                           image_location: "")
         filtered_specials = [joe_special, mary_special, joe_special_2]
         
-        expect(Special.filter_by_age).to eq(filtered_specials)
+        expect(Special.filter_by_age(34)).to eq(filtered_specials)
       end
     end
   end

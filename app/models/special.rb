@@ -7,8 +7,8 @@ class Special < ActiveRecord::Base
     average(:length)
   end
   
-  def self.filtered_average_length(age)
-    joins(:comedian)
+  def self.filter_by_age(filter_age)
+    joins(:comedian).where(comedians: {age: filter_age})
   end
   
   def self.total_specials
