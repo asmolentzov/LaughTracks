@@ -4,6 +4,9 @@ class LaughTracksApp < Sinatra::Base
     if params[:age]
       @comedians = Comedian.filter_by_age(params[:age])
       @specials = Special.filter_by_age(params[:age])
+    elsif params[:sort] == 'name'
+      @comedians = Comedian.sort(params[:sort])
+      @specials = Special.all
     else
       @comedians = Comedian.all
       @specials = Special.all

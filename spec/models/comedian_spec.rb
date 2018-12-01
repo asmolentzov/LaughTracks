@@ -40,6 +40,13 @@ RSpec.describe Comedian do
         expect(Comedian.filter_by_age(40)).to eq([@jane, mary])
       end
     end
+    describe '.sort' do
+      it 'should return comedians in the specified sorted order' do
+        name_sort_expected_result = [@bob, @jane, @joe]
+        
+        expect(Comedian.sort(name)).to eq(name_sort_expected_result)
+      end
+    end
   end
   
   describe 'Instance Methods' do
