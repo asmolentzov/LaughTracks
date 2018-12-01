@@ -17,9 +17,9 @@ RSpec.describe Comedian do
   
   describe 'Class Methods' do
     before(:each) do
-      @bob = Comedian.create(name: "Bob", age: 30, city: "Denver")
+      @bob = Comedian.create(name: "Bob", age: 30, city: "New York City")
       @joe = Comedian.create(name: "Joe", age: 50, city: "Stockholm")
-      @jane = Comedian.create(name: "Jane", age: 40, city: "Stockholm")
+      @jane = Comedian.create(name: "Jane", age: 40, city: "Denver")
     end
     describe '.average_age' do
       it 'should return the average age of all comedians' do
@@ -30,7 +30,8 @@ RSpec.describe Comedian do
     end
     describe '.unique_cities' do
       it 'should return a list of all the unique cities the comedians are from' do        
-        expect(Comedian.unique_cities).to eq(['Denver', 'Stockholm'])      
+        mary = Comedian.create(name: "Mary", age: 40, city: "Stockholm")
+        expect(Comedian.unique_cities).to eq(['Denver', 'New York City', 'Stockholm'])      
       end
     end
     describe '.filter_by_age' do
@@ -41,10 +42,14 @@ RSpec.describe Comedian do
       end
     end
     describe '.sort_by' do
-      it 'should return comedians in the specified sorted order' do
+      it 'should return comedians in the specified sorted order' do        
         name_sort_expected_result = [@bob, @jane, @joe]
+        age_sort_expected_result = [@bob, @jane, @joe]
+        city_sort_expected_result = [@jane, @bob, @joe]
         
         expect(Comedian.sort_by('name')).to eq(name_sort_expected_result)
+        expect(Comedian.sort_by('age')).to eq(age_sort_expected_result)
+        expect(Comedian.sort_by('city')).to eq(city_sort_expected_result)
       end
     end
   end
