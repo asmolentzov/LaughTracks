@@ -9,11 +9,16 @@ class Comedian < ActiveRecord::Base
   end
   
   def self.unique_cities
-    distinct(:city).order(city: :asc).pluck(:city)
+    comedians = distinct(:city).order(city: :asc).all
+    comedians.pluck(:city)
   end
   
   def self.filter_by_age(age)
     where("age = ?", age)
+  end
+  
+  def self.sort_by(attribute)
+    order(attribute).all
   end
   
   def total_specials
