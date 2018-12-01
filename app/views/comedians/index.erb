@@ -11,13 +11,13 @@
 <section class="row">
     <% @comedians.each do |comedian| %>
       <article class="comedian" id=comedian-<%= comedian.id %>>
-        <h3><%= comedian.name %></h3>
+        <h3><a href="comedians/<%= comedian.id %>"><%= comedian.name %></a></h3>
         <div class="comedian-stats">
           Age: <%= comedian.age %> <br />
           City: <%= comedian.city %> <br />
           Total Specials: <%= comedian.total_specials %>
         </div>
-        <div class="specials">
+        <div class="specials"> 
           <h6>Specials: </h6>
           <% if comedian.specials.empty? %>
             <p>
@@ -29,7 +29,7 @@
             <li>
                 <%= special.name %>
                 Runtime: <%= special.length %>
-                <img class="img-thumbnail" src="<%= special.image_location %>" alt="<%=special.name %>"
+                <img class="img-thumbnail" src="<%= special.image_location %>" alt="<%=special.name %>">
             </li>
             <% end %>
             </ul>

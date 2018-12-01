@@ -23,7 +23,7 @@ RSpec.describe 'As a visitor to the app' do
       click_link "#{bob.name}"
     end
     
-    expect(current_path).to eq("comedians/#{bob.id}")
+    expect(current_path).to eq("/comedians/#{bob.id}")
   end
   
   it 'should only see indicated comedian info on page' do
