@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to top right, #003049, #54f2f2);
+  color: #003049;
+}
 h3 {
   text-align: center;
 }
@@ -5,15 +9,24 @@ h6 {
   margin-bottom: 0;
 }
 
+.row {
+  flex-wrap: wrap;
+}
+
 .img-thumbnail {
   height: 150px;
 }
 
 .comedian {
-  width: 350px;
-  background: #919191;
+  flex-basis: 350px;
+  flex-grow: 1;
+  background-image: linear-gradient(to top left, #f77f00, #f4e04d);
   border: 1px solid black;
   margin: 10px;
+  padding: 20px 0;
+}
+.comedian a {
+  color: #003049;
 }
 .comedian-stats {
   text-align: center;
@@ -23,3 +36,8 @@ h6 {
   margin: 0 30px;
 }
 
+#statistics {
+  background: #f4e04d;
+  padding: 20px;
+  border: 3px solid black;
+}
