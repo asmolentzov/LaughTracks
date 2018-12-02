@@ -1,5 +1,5 @@
 <header>
-  <h1>Comedians</h1>
+  <h1>Comedians</h1> <br />
   <blockquote cite="https://www.brainyquote.com/quotes/louis_c_k_452752">
     It's a positive thing to talk about terrible things and make people laugh about them.
   </blockquote>
@@ -7,12 +7,36 @@
 </header>
 <section id="statistics">
   <h2>Statistics</h2>
-  <p>    
-  Average Age: <%= @average_age %> <br />
-  Average TV Special Runtime: <%= @average_length.to_i %> minutes<br />
-  Cities: <%= @cities.join(' ') %> <br />
-  Total TV Specials: <%= @total_specials %>
-  </p>
+  <table>
+    <tr>
+      <th>
+        Average Age
+      </th>
+      <th>
+        Average TV Special Runtime
+      </th>
+      <th>
+        Cities
+      </th>
+      <th>
+        Total TV Specials
+      </th>
+      </tr>
+      <tr>
+        <td>
+          <%= @average_age %>
+        </td>
+        <td>
+          <%= @average_length.to_i %> minutes
+        </td>
+        <td>
+          <%= @cities.join(' ') %>
+        </td>
+        <td>
+          <%= @total_specials %>
+        </td>
+        </tr>
+  </table>  
 </section>
 <section class="row">
     <% @comedians.each do |comedian| %>
