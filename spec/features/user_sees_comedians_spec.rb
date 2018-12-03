@@ -31,10 +31,10 @@ RSpec.describe 'A visitor to our app' do
     
     within "#statistics" do
       expect(page).to have_content("Statistics")
-      expect(page).to have_content("Average Age: #{Comedian.average_age}")
-      expect(page).to have_content("Average TV Special Runtime: #{Special.average_length.to_i}")
-      expect(page).to have_content("Cities: #{Comedian.unique_cities.join(' ')}")
-      expect(page).to have_content("Total TV Specials: 2")
+      expect(page).to have_content(Comedian.average_age)
+      expect(page).to have_content(Special.average_length.to_i)
+      expect(page).to have_content(Comedian.unique_cities.join(' '))
+      expect(page).to have_content(Special.total_specials)
     end
   end
 end

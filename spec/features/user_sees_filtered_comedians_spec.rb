@@ -41,10 +41,10 @@ RSpec.describe 'As a visitor to the app' do
     filtered_total_specials = 3
     
     within "#statistics" do
-      expect(page).to have_content("Average Age: #{filtered_average_age}")
-      expect(page).to have_content("Average TV Special Runtime: #{filtered_average_length}")
-      expect(page).to have_content("Cities: #{filtered_cities}")
-      expect(page).to have_content("Total TV Specials: #{filtered_total_specials}")
+      expect(page).to have_content(filtered_average_age)
+      expect(page).to have_content(filtered_average_length)
+      expect(page).to have_content(filtered_cities)
+      expect(page).to have_content(filtered_total_specials)
     end
     
   end

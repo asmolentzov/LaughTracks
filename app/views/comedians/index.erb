@@ -1,13 +1,41 @@
-<h1>Comedians</h1>
 <section id="statistics">
   <h2>Statistics</h2>
-  <p>    
-  Average Age: <%= @average_age %> <br />
-  Average TV Special Runtime: <%= @average_length.to_i %> minutes<br />
-  Cities: <%= @cities.join(' ') %> <br />
-  Total TV Specials: <%= @total_specials %>
-  </p>
+  <blockquote>
+    There are lies, damned lies, and statistics.
+  </blockquote>
+  <cite>Mark Twain</cite>
+  <table>
+    <tr>
+      <th>
+        Average Age
+      </th>
+      <th>
+        Average TV Special Runtime
+      </th>
+      <th>
+        Cities
+      </th>
+      <th>
+        Total TV Specials
+      </th>
+      </tr>
+      <tr>
+        <td>
+          <%= @average_age.round(2) %>
+        </td>
+        <td>
+          <%= @average_length.to_i %> minutes
+        </td>
+        <td>
+          <%= @cities.join(' ') %>
+        </td>
+        <td>
+          <%= @total_specials %>
+        </td>
+        </tr>
+  </table>  
 </section>
+
 <section class="row">
     <% @comedians.each do |comedian| %>
       <article class="comedian" id=comedian-<%= comedian.id %>>
@@ -18,7 +46,7 @@
           Total Specials: <%= comedian.total_specials %>
         </div>
         <div class="specials"> 
-          <h6>Specials: </h6>
+          <h5>Specials: </h5>
           <% if comedian.specials.empty? %>
             <p>
             No joke: this comedian has no specials.
@@ -27,8 +55,8 @@
           <ul> 
             <% comedian.specials.each do |special| %>
             <li>
-                <%= special.name %>
-                Runtime: <%= special.length %>
+                <h6><%= special.name %></h6>
+                Runtime: <%= special.length %> <br />
                 <img class="img-thumbnail" src="<%= special.image_location %>" alt="<%=special.name %>">
             </li>
             <% end %>
@@ -37,4 +65,7 @@
           </div>
       </article>
   <% end %>
+</section>
+<section class="new">
+  <a href="/comedians/new">Add a new comedian</a>
 </section>
