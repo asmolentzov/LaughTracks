@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- <link rel="stylesheet" href="css/bootstrap-reboot.css" />
-   <link rel="stylesheet" href="css/bootstrap.css" /> -->
-   <link rel="stylesheet" href="reset.css" />
-   <link rel="stylesheet" href="custom.css" />
+   <link rel="stylesheet" href="/reset.css" type="text/css"/>
+   <link rel="stylesheet" href="/custom.css" type="text/css" />
    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <%= yield %>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-    </div>
+    <header>
+      <h1>Comedians</h1> <br />
+      <blockquote cite="https://www.brainyquote.com/quotes/louis_c_k_452752">
+        It's a positive thing to talk about terrible things and make people laugh about them.
+      </blockquote>
+      <cite>Louis C.K.</cite>
+    </header>
+    <%= yield %>
   </body>
 </html>
