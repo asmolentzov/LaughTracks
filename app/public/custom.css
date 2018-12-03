@@ -125,7 +125,6 @@ th {
 }
 
 .individual, .new {
-  width: 100%;
   background-image: linear-gradient(to top left, #f77f00, #f4e04d);
 }
 .individual .comedian-stats {
