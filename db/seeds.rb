@@ -10,7 +10,7 @@ tn = Comedian.create(name: 'Trevor Noah', age: 34, city: 'Johannesburg')
 lck = Comedian.create(name: 'Louis C.K.', age: 51, city: 'Washington, D.C.')
 jk = Comedian.create(name: 'Jen Kirkman', age: 44, city: 'Needham')
 ss = Comedian.create(name: 'Sarah Silverman', age: 47, city: 'Bedford')
-as = Comedian.create(name: 'Amy Schumer', age: 37, city: 'New York City')
+jm = Comedian.create(name: 'John Mulaney', age: 36, city: 'Chicago')
 jok = Comedian.create(name: 'Jo Koy', age: 47, city: 'Tacoma')
 hm = Comedian.create(name: 'Hasan Minhaj', age: 33, city: 'Davis')
 ed = Comedian.create(name: 'Ellen DeGeneres', age: 60, city: 'Metairie')
@@ -22,6 +22,9 @@ dm.specials.create(name: 'Live (At the Time)', length: 61, image_location: 'http
 dm.specials.create(name: 'The Overthinker', length: 56, image_location: 'https://m.media-amazon.com/images/M/MV5BMGU1N2Q1ZGUtYWY3OC00M2Q5LWIyNGMtMjA3ZDcxMmY2N2M2XkEyXkFqcGdeQXVyMjQzOTM1NTc@._V1_.jpg')
 
 jg.specials.create(name: 'Cinco', length: 73, image_location: 'https://m.media-amazon.com/images/M/MV5BYzM5N2YyODQtZTkyMC00ZGVhLWJmZmYtZTI3ZGM2ODAzMzA1L2ltYWdlXkEyXkFqcGdeQXVyMzcwMjcwNQ@@._V1_SY1000_CR0,0,666,1000_AL_.jpg')
+jg.specials.create(name: 'Beyond the Pale', length: 72, image_location: 'https://m.media-amazon.com/images/M/MV5BMTk3NjU2ODY5NF5BMl5BanBnXkFtZTgwNTEyODkwMzE@._V1_.jpg')
+jg.specials.create(name: 'Mr. Universe', length: 78, image_location: 'https://m.media-amazon.com/images/M/MV5BNTE4NjU0NTYxM15BMl5BanBnXkFtZTcwMzAzMjA1OQ@@._V1_.jpg')
+jg.specials.create(name: 'King Baby', length: 60, image_location: 'https://m.media-amazon.com/images/M/MV5BMjI3ODgwMDU2NF5BMl5BanBnXkFtZTgwMTczMzA2MDE@._V1_.jpg')
 
 tn.specials.create(name: 'Son of Patricia', length: 63, image_location: 'https://m.media-amazon.com/images/M/MV5BMTU4MTA5NjMyNl5BMl5BanBnXkFtZTgwNDY0OTI4NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg')
 tn.specials.create(name: 'Afraid of the Dark', length: 67, image_location: 'https://m.media-amazon.com/images/M/MV5BMTZhNjNjNGUtYTc2Ni00ZDc4LWJjNDMtYjVlOTI5OGI5YzE5XkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_.jpg')
@@ -37,7 +40,7 @@ ss.specials.create(name: 'A Speck of Dust', length: 71, image_location: 'https:/
 ss.specials.create(name: 'Jesus is Magic', length: 72, image_location: 'https://m.media-amazon.com/images/M/MV5BMTYxOTUzOTU3N15BMl5BanBnXkFtZTcwNzE4ODUzMQ@@._V1_SY1000_CR0,0,670,1000_AL_.jpg')
 ss.specials.create(name: 'We Are Miracles', length: 53, image_location: 'https://m.media-amazon.com/images/M/MV5BODU5MWI2YWEtNTQ3Ny00OWQ3LThkNTUtYzdiNDVjNDczM2NiXkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_SY1000_SX675_AL_.jpg')
 
-as.specials.create(name: 'Live at the Apollo', length: 61, image_location: 'https://m.media-amazon.com/images/M/MV5BMTkzMzU1MTc3M15BMl5BanBnXkFtZTgwNjYyMjQ5NjE@._V1_.jpg')
+jm.specials.create(name: 'The Comeback Kid', length: 62, image_location: 'https://m.media-amazon.com/images/M/MV5BMDQ3NjU0NmQtYjgyZS00MzIzLWJjNDEtMWY5YjczYjc0MTMyXkEyXkFqcGdeQXVyMjI0MjUyNTc@._V1_.jpg')
 
 jok.specials.create(name: 'Live from Seattle', length: 62, image_location: 'https://m.media-amazon.com/images/M/MV5BNDgyZTU4YmUtMDhjMi00NDZkLWJhYjEtMmNhZWI3MWI1OGQ2XkEyXkFqcGdeQXVyMjExNDAyOTU@._V1_.jpg')
 jok.specials.create(name: "Don't Make Him Angry", length: 44, image_location: 'https://m.media-amazon.com/images/M/MV5BMTk0NTMwNjk0OV5BMl5BanBnXkFtZTgwODExMzA2MDE@._V1_.jpg')
