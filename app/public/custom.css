@@ -124,6 +124,9 @@ th {
   padding: 10px 30px;
 }
 
+.individual {
+  padding-bottom: 20px;
+}
 .individual, .new {
   background-image: linear-gradient(to top left, #f77f00, #f4e04d);
 }
